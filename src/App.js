@@ -1,11 +1,13 @@
 import React from 'react'
-import Header from './Components/Header/Header'
 import './App.css'
+import Header from './Components/Header/Header'
+import MainSection from './Components/MainSection/MainSection'
 
 const App = () => {
   return (
-    <div>
+    <div className='app'>
       <Header />
+      <MainSection />
     </div>
   )
 }

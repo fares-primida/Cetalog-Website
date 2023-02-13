@@ -1,0 +1,74 @@
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .category {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        h1 {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2.5em;
+            color: #fff;
+        }
+        .buttons {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            display: flex;
+            .ServiceB {
+                border: none;
+                padding: 7px 10px;
+                height: 50px;
+                border-radius: 10px;
+                background-image: linear-gradient(to top ,#3EADCF , #36096D);
+                color: #fff;
+                font-size: 1em;
+                margin-right: 80px;
+            }
+            .workB {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: auto;
+                height: 70px;
+                .icon {
+                    width: 70px;
+                    border-right: 1px solid #fff;
+                    height: 70px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 10px;
+                    font-size: 3em;
+                    color: #fff;
+                }
+                p {
+                    font-size: 1.5em;
+                    font-weight: 500;
+                    color: #fff;
+                    
+                }
+            }
+        }
+    }
+    .image {
+        position: absolute;
+        width: 100%;
+        height: 250px;
+        left: 50%;
+        bottom: -15%;
+        transform: translate(-50% , -50%);
+        img {
+            position: absolute;
+            width: 100%;
+        }
+    }
+}

@@ -4,9 +4,12 @@ import './Header.scss'
 import {AiFillCaretDown , AiOutlineSearch} from 'react-icons/ai'
 
 
+
+
 const Header = () => {
+
     return (
-        <div className='header'>
+        <header className='header'>
             <div className="container">
                 <div className="box1">
                     <div className="HeaderImage">
@@ -35,7 +38,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

@@ -9,11 +9,12 @@ $BorderColor: #777;
     position: relative;
     width: 100%;
     height: $Height;
-    background-color: #000;
+    background-color: transparent;
     border-bottom: 1px solid $BorderColor;
+    backdrop-filter: blur(25px);
     .container {
         inset: 10px;
-        background-color: #000;;
+        background-color: transparent;;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -62,10 +63,11 @@ $BorderColor: #777;
             border: none;
             button {
                 padding: 10px 20px;
-                margin: 0px 20px;
+                margin: 0px 15px;
                 font-size: 1em;
                 color: #fff;
                 cursor: pointer;
+                border: none;
             }
             .SearchButton {
                 border-radius: 50px;
