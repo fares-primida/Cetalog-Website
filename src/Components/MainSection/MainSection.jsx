@@ -2,10 +2,12 @@ import React from 'react'
 import './MainSection.scss'
 import Line from './hero-shape.png'
 import {BsFillPlayFill} from 'react-icons/bs'
+import Header from '../Header/Header'
 
 const MainSection = () => {
     return (
         <div className='content'>
+            <Header />
             <div className="category">
                 <h1>i think your busniess find <br /> seo solutions...</h1>
                 <div className="buttons">

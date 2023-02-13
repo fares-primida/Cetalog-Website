@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
-import Header from './Components/Header/Header'
 import MainSection from './Components/MainSection/MainSection'
+import SecondSection from './Components/SecondSection/SecondSection'
 
 const App = () => {
   return (
     <div className='app'>
-      <Header />
       <MainSection />
+      <SecondSection />
     </div>
   )
 }
