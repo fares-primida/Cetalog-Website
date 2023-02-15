@@ -1,56 +1,41 @@
+@import '../Mixens';
+
 .third-section {
-    position: relative;
-    width: 100%;
+    @include Position-And-Size(relative , 100% , default);
     min-height: fit-content;
     .container {
-        width: 100%;
-        height: 100%;
-        padding: 10px 20px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
+        @include Container(
+            100% , 100% , flex , center , 
+            space-between , wrap , 10px 20px
+        );
         .Box {
-            width: 650px;
-            height: 600px;
+            @include Position-And-Size(default , 650px , 600px);
             border-radius: 20px;
             margin: 10px 0px;
         }
         .CBox {
             position: relative;
             padding: 5px 10%;
-            display: flex;
+            @include Center(flex , center , default);
             flex-direction: column;
-            align-items: center;
             .title {
-                position: relative;
-                width: 600px;
-                height: 60px;
+                @include Position-And-Size(relative , 600px , 60px);
                 margin: 10px;
                 .container {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
+                    @include Position-And-Size(absolute , 100% , 100%);
+                    @include Center(flex , center , default);
                     padding: 2px 10px;
-                    display: flex;
-                    align-items: center;
                     .TitleText {
-                        position: relative;
-                        width: 150px;
-                        height: 30px;
+                        @include Position-And-Size(relative , 150px , 30px);
+                        @include Center(flex , center , center);
                         background-color: #fff;
                         border-radius: 10px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         color: #000;
                         font-weight: 600;
                         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
                         &::before {
                             content: '';
-                            position: absolute;
-                            width: 12px;
-                            height: 12px;
+                            @include Position-And-Size(absolute , 12px , 12px);
                             border-radius: 50%;
                             background-image: linear-gradient(to top ,#3EADCF , #36096D);
                             left: 10%;
@@ -59,9 +44,7 @@
                         }
                         &::after {
                             content: '';
-                            position: absolute;
-                            width: 12px;
-                            height: 12px;
+                            @include Position-And-Size(absolute , 12px , 12px);
                             border-radius: 50%;
                             background-image: linear-gradient(to top ,#3EADCF , #36096D);
                             right: 5%;
@@ -72,8 +55,7 @@
                 }
             }
             .Desc {
-                width: 600px;
-                height: 250px;
+                @include Position-And-Size(default , 600px , 250px);
                 margin-bottom: 10px;
                 padding: 5px 10px;
                 h2 {
@@ -88,30 +70,20 @@
                 }
             }
             .Extentions {
-                position: relative;
-                width: 600px;
-                height: 180px;
+                @include Position-And-Size(relative , 600px , 180px);
                 margin-bottom: 5px;
                 .container {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
+                    @include Position-And-Size(absolute , 100% , 100%);
+                    @include Center(flex , center , space-between);
                     flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: space-between;
                     .EXBox {
-                        position: relative;
-                        width: 250px;
-                        height: 40px;
+                        @include Position-And-Size(relative , 250px , 40px);
                         background-color: #fff;
                         margin: 5px 0px;
                         border-radius: 10px;
                         .iconArea {
-                            position: absolute;
+                            @include Position-And-Size(absolute , 20% , 100%);
                             left: 0;
-                            width: 20%;
-                            height: 100%;
                             span {
                                 position: absolute;
                                 left: 60%;
@@ -121,13 +93,9 @@
                             }
                         }
                         .TextArea {
-                            position: absolute;
+                            @include Position-And-Size(absolute , 80% , 100%);
+                            @include Center(flex , center , start);
                             right: 0;
-                            width: 80%;
-                            height: 100%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: start;
                             p {
                                 font-weight: 500;
                             }
@@ -136,12 +104,10 @@
                 }
             }
             .SubscribButton {
-                width: 600px;
-                height: 100px;
+                @include Position-And-Size(default , 600px , 100px);
                 padding: 5px 15px;
                 .ABtn {
-                    width: 300px;
-                    height: 70px;
+                    @include Position-And-Size(default , 300px , 70px);
                     background-image: linear-gradient(to top ,#3EADCF , #36096D);
                     color: #fff;
                     border: none;
@@ -160,9 +126,7 @@
         }
         .IBox {
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include Center(flex , center , center);
             img {
                 width: 100%;
             }

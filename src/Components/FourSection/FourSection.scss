@@ -1,39 +1,28 @@
+@import '../Mixens';
+
 .four-section {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include Position-And-Size(relative , 100% , 60vh);
+    @include Center(flex , center , center);
     .BackBox {
-        width: 1100px;
-        height: 300px;
+        @include Center(flex , center , center);
+        @include Position-And-Size(default , 1100px , 300px);
         background-image: url(./Main-Section.jpg);
         background-size: cover;
         border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         .container {
-            width: 1000px;
-            height: 250px;
+            @include Center(flex , center , space-between);
+            @include Position-And-Size(default , 1000px , 250px);
             backdrop-filter: blur(25px);
             border: 2px solid rgb(206, 205, 205);
             border-radius: 20px;
             box-shadow: 5px 5px 10px rgba(0 ,0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             padding: 5px 10px;
             .BoxF {
-                width: 550px;
-                height: 200px;
+                @include Center(flex , center , center);
+                @include Position-And-Size(default , 550px , 200px);
                 border-radius: 20px;
-                display: flex;
                 flex-wrap: wrap;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
                 h2 {
                     color: #fff;
                     font-weight: 600;
@@ -47,8 +36,7 @@
                 @extend .BoxF;
                 width: 350px;
                 .StartBtn {
-                    width: 250px;
-                    height: 80px;
+                    @include Position-And-Size(default , 250px , 80px);
                     font-size: 1.2em;
                     border: none;
                     border-radius: 20px;
@@ -66,9 +54,7 @@
         }
     }
     .LineImg {
-        position: absolute;
-        width: 100%;
-        height: 100px;
+        @include Position-And-Size(absolute , 100% , 100px);
         left: 50%;
         top: 80%;
         transform: translate(-50% , -50%);

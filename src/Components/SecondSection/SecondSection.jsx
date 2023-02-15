@@ -4,8 +4,6 @@ import {data} from './Data.js'
 import { createElement } from 'react'
 
 
-
-
 function CreateElements({BCN , ICN , IC , IS , O , H2 , P})  {
             return React.createElement('div' , {className : BCN},
             createElement('div' , {className : ICN}, 
