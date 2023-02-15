@@ -21,7 +21,7 @@ function CreateElements({BCN , ICN , IC , IS , O , H2 , P})  {
 
     const Category = () => {
         for(let i = 0; i < data.length; i++) {
-            yy.push(<CreateElements 
+            content.push(<CreateElements 
                 key={i}
                 BCN={data[i].BoxclassName} 
                 ICN={data[i].ImgClassName} 
@@ -32,13 +32,12 @@ function CreateElements({BCN , ICN , IC , IS , O , H2 , P})  {
                 P={data[i].PText}
                 />) 
         }
-        return yy
+        return content
     }
 
-    const yy = []
+    const content = []
 
 const SecondSection = () => {
-    console.log(yy)
     return (
         <div className='second-section'>
             <div className="container">
