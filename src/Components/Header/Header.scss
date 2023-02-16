@@ -1,105 +1,106 @@
-
+@import '../Mixens';
 
 // variables
-$Height: 130px;
 $BorderColor: #777;
 
 
 .header {
-    position: relative;
-    width: 100%;
-    height: $Height;
+    @include Position-And-Size(relative , 100% , 130px);
     background-color: transparent;
     border-bottom: 1px solid $BorderColor;
     backdrop-filter: blur(25px);
     .container {
-        inset: 10px;
+        @include Center(flex , center , space-between);
+        @include Position-And-Size(absolute , 100% , 100%);
         background-color: transparent;;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         .box1 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 200px;
-            min-height: $Height;
-            padding: 0px 10px;
-            .HeaderImage {
-                img {
-                    width: 200px;
-                }
+            @include Center(flex , center , center);
+            @include Position-And-Size(relative , 200px , 130px);
+            img {
+                @include Position-And-Size(absolute , 95%, default);
             }
         }
         .box2 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 700px;
-            min-height: $Height;
-            border-right: 1px solid $BorderColor;
-            border-left: 1px solid $BorderColor;
-            .container {
-                width: 90%;
-                height: 90%;
-                padding: 0px 10px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                h2 {
-                    color: #fff;
-                    text-transform: uppercase;
-                    margin-right: 5px;
-                    cursor: pointer;
-                    span {
-                        color: #fff;
-                    }
+            @extend .box1;
+            width: 700px;
+            border-right: 1px solid #777;
+            border-left: 1px solid #777;
+            justify-content: space-around;
+            h2 {
+                @include Position-And-Size(default , 140px , 100%);
+                // background-color: #777;
+                @include Center(flex , center , center);
+                font-size: 1.3em;
+                color: #fff;
+                span {
+                    margin-bottom: -10px;
                 }
             }
         }
         .box3 {
-            @extend .box2;
-            min-width: 400px;
-            border: none;
-            button {
-                padding: 10px 20px;
-                margin: 0px 15px;
-                font-size: 1em;
-                color: #fff;
-                cursor: pointer;
-                border: none;
-            }
-            .SearchButton {
-                border-radius: 50px;
-                background-color: transparent;
-                border: 1px solid $BorderColor;
-                font-size: 1.2em;
-                transition: 0.5s;
-                &:hover {
-                    background-color: #fff;
-                    color: #000;
+            @extend .box1;
+            width: 400px;
+            justify-content: space-around;
+            .S {
+                button {
+                    @include Position-And-Size(default , 50px , 50px);
+                    background-color: transparent;
+                    border-radius: 50%;
+                    transition: 0.5s;
+                    border: none;
+                    cursor: pointer;
+                    color: #fff;
+                    span {
+                        font-size: 1.7em;
+                    }
                 }
             }
-            .LoginButton {
-                border-radius: 15px;
-                background-color: transparent;
-                border: 1px solid $BorderColor;
-                transition: 0.5s;
-                &:hover {
-                    background-color: #fff;
-                    color: #000;
+            .L {
+                button {
+                    @include Position-And-Size(default , 100px , 40px);
+                    border: 1px solid rgb(24, 24, 24);
+                    background-color: #000;
+                    border-radius: 20px;
+                    transition: 0.5s;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                    color: #fff;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #fff;
+                        color: #000;
+                    }
                 }
             }
-            .ContactButton {
-                border-radius: 5px;
-                background-image: linear-gradient(to top ,#009FFD , #2A2A72);
-                font-size: 1.5em;
-                padding: 15px 20px;
-                transition: 0.5s;
-                &:hover {
-                    position: relative;
-                    transform: translateY(-10px);
+            .C {
+                button {
+                    @include Position-And-Size(default , 120px , 50px);
+                    background-image: linear-gradient(to top ,#3EADCF , #36096D);
+                    border-radius: 15px;
+                    transition: 0.5s;
+                    font-size: 0.85em;
+                    font-weight: bold;
+                    border: none;
+                    cursor: pointer;
+                    color: #fff;
+                    &:hover {
+                        transform: translateY(-10px);
+                    }
                 }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .header {
+        .container {
+            .box2 {
+                display: none;
+            }
+            .box3 {
+                width: 600px;
             }
         }
     }

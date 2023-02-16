@@ -11,30 +11,24 @@ const Header = () => {
     return (
         <header className='header'>
             <div className="container">
-                <div className="box1">
-                    <div className="HeaderImage">
-                        <img src={HeaderImage} alt="" />
-                    </div>
+                <div className='box1'>
+                    <img src={HeaderImage} alt="" />
                 </div>
-                <div className="box2">
-                    <div className="container">
-                        <h2>Home <span><AiFillCaretDown /></span></h2>
-                        <h2>Pages <span><AiFillCaretDown /></span></h2>
-                        <h2>Portofolio <span><AiFillCaretDown /></span></h2>
-                        <h2>Blog <span><AiFillCaretDown /></span></h2>
-                    </div>
+                <div className='box2'>
+                    <h2>Home <span><AiFillCaretDown /></span></h2>
+                    <h2>Pages <span><AiFillCaretDown /></span></h2>
+                    <h2>Portofolio <span><AiFillCaretDown /></span></h2>
+                    <h2>Blog <span><AiFillCaretDown /></span></h2>
                 </div>
-                <div className="box3">
-                    <div >
-                        <button className="SearchButton">
-                            <span><AiOutlineSearch /></span>
-                        </button>
-                        <button className="LoginButton">
-                            <h3>login</h3>
-                        </button>
-                        <button className="ContactButton">
-                            contact us
-                        </button>
+                <div className='box3'>
+                    <div className='Box S'>
+                        <button><span><AiOutlineSearch /></span></button>
+                    </div>
+                    <div className='Box L'>
+                        <button>Login</button>
+                    </div>
+                    <div className='Box C'>
+                        <button>Contact Us</button>
                     </div>
                 </div>
             </div>
